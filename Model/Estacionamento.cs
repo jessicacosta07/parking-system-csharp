@@ -41,10 +41,9 @@ namespace parking_system_csharp.Model
                 Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
                 string quantidadeHoras = Console.ReadLine();
                 // TODO: Realizar o seguinte cálculo: "precoInicial + precoPorHora * horas" para a variável valorTotal
-                decimal valorTotal = 0;
                 decimal horas = 0;
                 Decimal.TryParse(quantidadeHoras, out horas);
-                valorTotal = precoInicial + (precoPorHora * horas);
+                decimal valorTotal = precoInicial + (precoPorHora * horas);
 
 
                 // TODO: Remover a placa digitada da lista de veículos
@@ -67,7 +66,7 @@ namespace parking_system_csharp.Model
                 int contadorVeiculos = 0;
                 foreach (string item in veiculos)
                 {
-                    Console.WriteLine($"Posição Nº {contadorVeiculos} - {veiculos[contadorVeiculos]}");
+                    Console.WriteLine($"Posição Nº {contadorVeiculos + 1} - {veiculos[contadorVeiculos]}");
                     contadorVeiculos++;
                 }
             }
